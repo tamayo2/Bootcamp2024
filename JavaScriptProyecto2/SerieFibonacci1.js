@@ -6,22 +6,6 @@ function fibonacciRecursivo(n) {
     }
 }
   
-function fibonacciIterativo(n) {
-    if (n === 0 || n === 1) {
-      return n; // Retorna directamente n si es 0 o 1
-    } else {
-      let a = 0; // Variable para almacenar el valor de Fibonacci en la posición n-2
-      let b = 1; // Variable para almacenar el valor de Fibonacci en la posición n-1
-      let c; // Variable para calcular el valor de Fibonacci en la posición n
-      for (let i = 2; i <= n; i++) {
-        c = a + b; // Calcula el valor de Fibonacci en la posición actual
-        a = b;  // Actualiza el valor de a con el valor de b (n-1)
-        b = c; // Actualiza el valor de b con el valor de c (n)
-      }
-      return c; // Retorna el valor de Fibonacci en la posición n
-    }
-}
-  
 function mostrarFibonacci() {
     let limite = 10000; // Límite superior para la serie de Fibonacci
     let i = 0;  // Contador para el índice de la serie de Fibonacci
