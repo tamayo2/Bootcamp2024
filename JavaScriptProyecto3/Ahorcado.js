@@ -36,11 +36,11 @@ console.log("|");
 console.log("-----");
 
 while (partesCuerpo < 6) {
-    let letra = prompt("Entre una letra: ").toLowerCase(); // Convertir la letra a minúscula
+    let letra = prompt("Entre una letra: ").toLowerCase(); 
 
     if (letrasJugadas.includes(letra)) {
         console.log("¡Ya has jugado esa letra! Intenta con otra.");
-        continue; // Saltar a la siguiente iteración del bucle
+         continue; 
     }
 
     letrasJugadas.push(letra);

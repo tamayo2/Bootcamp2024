@@ -16,7 +16,6 @@ function imprimirTablero(tablero) {
 }
 
 function hayGanador(tablero) {
-    // Verificar filas
     for (let fila of tablero) {
         if (fila[0] === fila[1] && fila[1] === fila[2]) {
             return fila[0];
