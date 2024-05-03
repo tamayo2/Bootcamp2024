@@ -1,0 +1,98 @@
+* {
+    transition: transform 0.7s; /*todas las animaciones del documento*/
+}
+
+html {
+    height: 100vh;
+}
+
+#tablero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0.5%;
+    z-index: 1;
+    position: absolute;
+}
+.contenedorJuego {
+    max-width: 900px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    margin-top: 20px;
+}
+.juego{
+    width: 80%;
+    padding-bottom: 80%;
+    position: relative;
+}
+.row_board {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0.5% 0;
+}
+.row_boards{
+    position: absolute;
+    background-color: transparent;
+    padding: 0;
+    width: 25%;
+    height: 25%;
+}
+div {
+    display: inline-block;
+}
+
+.area-tarjeta,
+.tarjeta,
+.cara {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.cardAnimation {
+    animation: zoom .5s ease backwards;
+}
+
+.tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.trasera { /* imagen par */
+    transform: rotateY(180deg);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.superior {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.none {
+    display: none;
+}
+
+.show-item {
+    animation: swing 1s .5s both ease, slideOutDown 1s ease 1.5s 1 normal forwards;
+    transform-origin: top center;
+}

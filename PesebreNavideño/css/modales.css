@@ -1,0 +1,267 @@
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.modal-intro{
+    background-color: rgba(1, 0, 0, 0.78);
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    padding-top: 10%;
+}
+.modal-titulo {
+    font-family: 'Arlon', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #BC3D2E;
+    margin: 15px 0 0;
+    text-align: center;
+}
+
+.modal-titulo-feedback {
+    font-family: 'Arlon', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #BC3D2E;
+    margin: 15% 0 0;
+    text-align: center;
+}
+
+.hide-modal{
+    display: none;
+}
+
+.modalImg {
+    animation: bounceIn 1.5s backwards;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-comenzar{
+    animation: bounceIn 1.5s backwards;
+    font-family: inherit;
+    padding: 5px 1em;
+    background-color:#ED921F;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-radius: 2em;
+    border: 0;
+    flex-wrap: wrap;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0;
+    box-shadow: 0 8px 0 1px #d77c0e, 0 6px 0 1px #d77c0e, 0 4px 0 1px #d77c0e, 0 2px 0 1px #d77c0e, 0 0px 0 1px #d77c0e;
+    transition: all .3s;
+}
+
+.modal-contenido {
+    justify-content: center;
+    width: 25%;
+    position: relative;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}   
+
+.modal-contenido div{
+    justify-content: center;
+}
+
+.modal-contenedor {
+    max-height: 90%;
+    max-width: 75%;
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-game-contenido{
+    background-color: #fff;
+    border: 8px solid #ffc042;
+    border-radius: 15px;
+    position: relative;
+    max-width: 1000px;
+}
+
+.columnas-pesebre {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    flex-direction: row;
+    background-color: #E6CE76;
+    background-image: url(../img/estrellas.png);
+    background-size: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+}
+
+.columna-contenido .copo1{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    width: 30px;
+    height: auto;
+    animation: 2.5s rotate alternate-reverse infinite;
+}
+
+.columna-contenido .copo2{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 30px;
+    height: auto;
+    animation: 2.5s rotate alternate-reverse infinite;
+}
+
+.columna-contenido .copo1{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    width: 30px;
+    height: auto;
+    animation: 2.5s rotate alternate-reverse infinite;
+}
+
+/* clases de los modales */
+.columna-imagen-pesebre{
+    padding: 15px;
+    background-color: #ffc042;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/escena-pesebre.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 0;
+    padding-bottom: 64%;
+    border-radius: 7px 0 0 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgFeedback {
+    width: 100%;
+    height: 100%;
+}
+
+
+.columna-contenido{
+    font-size: 22px;
+    padding: 10px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image: url(../img/cinta.png), url(../img/bola.png);
+    background-size: 18%, 30%;
+    background-position: top 7% left 4%, top right -5%;
+    background-repeat: no-repeat;
+    background-color: #ffc042;
+    background-blend-mode: normal;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.modal__botonesCompartir {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    position: relative;
+    background-color: #07584E;
+}
+
+.modal__compartir {
+    margin-right: 30px;
+    color: #fff;
+    font-size: 25px;
+}
+
+.modal__botonesCompartir .btnCopy {
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+}
+
+.modal__botonesCompartir img {
+    width: 35px;
+    margin: 0 10px;
+}
+
+/* cubiertas */
+.modal-baltazar{
+    position: absolute;
+    left: 25.3%;
+    top: 13.3%;
+    width: 17.7%;
+    height: 60%;
+}
+
+.modal-gaspar{
+    position: absolute;
+    left: 40%;
+    top: 14.8%;
+    width: 19%;
+    height: 65.5%;
+}
+
+.modal-melchor{
+    position: absolute;
+    left: 46.5%;
+    top: 39.3%;
+    width: 30%;
+    height: 51.2%;
+}
+
+.modal-pastor{
+    position: absolute;
+    left: 69.3%;
+    top: 20%;
+    width: 18.7%;
+    height: 67%;
+}
+
+.modal-jose{
+    position: absolute;
+    left: 4.8%;
+    top: 22.6%;
+    width: 16.3%;
+    height: 62.8%;
+}
+
+.modal-maria{
+    position: absolute;
+    left: 1.4%;
+    top: 44.4%;
+    width: 26.6%;
+    height: 56%;
+}
+
+.modal-jesus{
+    position: absolute;
+    left: 25.4%;
+    top: 68.2%;
+    width: 21.5%;
+    height: 28.8%;
+}
+
+.modal-mula{
+    position: absolute;
+    left: 80%;
+    top: 40%;
+    width: 20%;
+    height: 60.2%;
+}

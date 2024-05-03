@@ -1,0 +1,178 @@
+/* DESCARGANDO FUENTES EN EL NAVEGADOR */
+@font-face {
+    font-family: 'Arlon';
+    src: url('../fonts/Arlon-Bold.woff2') format('woff2'),
+      url('../fonts/Arlon-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+} 
+  @font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+/* ------------------------------------------------------- */
+
+/*  CSS de el header, footer y botones de compartir laterales*/
+body {
+    user-select: none;
+    line-height: 1.4;
+}
+*{
+    padding: 0;
+}
+
+.mainContent{
+    background-image: url(../img/estrellas-bg.png), url(../img/background.png);
+    background-size: auto 300px, cover;
+    background-repeat: repeat-x, no-repeat;
+    background-blend-mode: normal, multiply;
+    background-color: #F2D272;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    min-height:calc(100vh - 130px - 110px);
+    display: block;
+    text-align: center;
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.headerLogo {
+    float: left;
+    width: 28%;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.logoImg{
+    width: 90%;
+    max-width: 350px;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+.headerText {
+    background-color: #e6f9f4;
+    padding: 15px 25px 15px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    width: 72%;
+    position: relative;
+    align-items: center;
+    float: left;
+}
+
+.headerTittle{
+    font-family: 'arlon';
+    font-weight: bold;
+    color: #5fa3a5;
+    font-size: 31px;
+    line-height: 1.2;
+    width: 100%;
+    display: block;
+}
+
+.headerParra {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #161b1c;
+    max-width: 1150px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+footer{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    bottom: 0px;
+    background-color: #e6f9f4;
+    vertical-align: middle;
+}
+
+#big-row{
+    display: flex;
+}
+
+#small-row{
+    display: none;
+}
+
+#siguenos{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    position: relative;
+}
+
+.contactenos{
+    background-color: #5ea4a5;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    padding: 2px 10px 3px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+    height: max-content;
+    opacity: 80%;
+    position: relative;
+}
+
+.btn-circulo{
+    width: 31px;
+    height: 31px;
+    text-align: center;
+    opacity: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 8px;
+    position: relative;
+}
+
+.footerText {
+    display: block;
+    position: absolute;
+    top: 10px;
+}
+
+.botonesizquierda{
+    position: fixed;
+    top: 50%;
+    left: 3px;
+    z-index: 100;
+    line-height: 1.5;
+}
+
+.btn2-circulo{
+    width: 31px;
+    height: 31px;
+    text-align: center;
+    opacity: 50%;
+    margin-top: auto;
+    margin-bottom: 2px;
+    margin-right: 5px;
+    position: relative;
+}

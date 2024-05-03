@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ES-es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Icono de la pagina -->
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="favicon.ico" sizes="192x192">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesebre Navideño</title>
+
+    <!-- Implementacion de los estilos -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animaciones.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/modales.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/memorama.css">
+    <!-- ---------------------------------------------------- -->
+</head>
+
+<body class="no-scroll">
+    <!-- Modal del inicio -->
+    <div id="modal-intro" class="modal-intro">
+        <div class="modal-contenido">
+            <div class="row">
+                <img class="modalImg" src="./img/modal-intro.png" alt="modal">
+            </div>
+            <div class="row">
+                <button id="btn-comenzar" class="btn-comenzar" onclick="cerrar()">Comenzar</button>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------- -->
+
+    <!-- Modal del juego -->
+    <div id="modal-juego" class="modal-intro hide-modal">
+        <div class="modal-contenedor">
+            <div class="modal-game-contenido">
+                <div class="columnas-pesebre">
+                    <div class="columna-imagen-pesebre">
+                        <!-- Imagenes tapas -->
+                        <img src="./img/baltazar.png" alt="baltazar" class="modal-baltazar">
+                        <img src="./img/gaspar.png" alt="gaspar" class="modal-gaspar">
+                        <img src="./img/melchor.png" alt="melchor" class="modal-melchor">
+                        <img src="./img/maria.png" alt="maria" class="modal-maria">
+                        <img src="./img/jesus.png" alt="jesus" class="modal-jesus">
+                        <img src="./img/mula-buey.png" alt="mula-buey" class="modal-mula">
+                        <img src="./img/jose.png" alt="jose" class="modal-jose">
+                        <img src="./img/pastor.png" alt="pastor" class="modal-pastor">
+                        <!-- --------------------------- -->
+                    </div>
+                    <!-- Columna derecha (Contenido) -->
+                    <div class="columna-contenido">
+                        <div class="modal-titulo">Sabias que</div>
+                        <p id="texto">
+
+                        </p>
+                        <button id="btn-juego" class="btn-comenzar" onclick="final()">Continuar</button>
+                        <img class="copo1" src="./img/copo.png">
+                        <img class="copo2" src="./img/copo.png">
+                    </div>
+                    <!-- ---------------------------- -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------- -->
+
+    <!-- Modal final -->
+    <div id="feedback" class="modal-intro hide-modal">
+        <div class="modal-contenedor">
+            <div class="modal-game-contenido">
+                <div class="columnas-pesebre">
+                    <div class="columna-imagen-pesebre-final">
+                        <img class="imgFeedback" src="./img/escena-pesebre.png" alt="Pesebre">
+                    </div>
+                    <!-- Columna derecha (contenido) -->
+                    <div class="columna-contenido">
+                        <div class="modal-titulo-feedback">Armaste tu pesebre</div>
+                        <p id="texto1">
+                        <p id="texto">
+                            Y junto con la esperanza de la llegada del Niño Dios te deseamos de todo corazón que ese
+                            regalo que tanto has anhelado llegue a ti en esta navidad.
+                        </p>
+                        <br>
+                        <p id="texto2">
+                            Felices fiestas te desea:
+                            <img src="img\logoEscuelDidactica.png" width="160px" height="28px" alt="logo">
+                        </p>
+                        <button id="btn-juego" class="btn-comenzar" onclick="final()">Vuelve a intentar</button>
+                        <img class="copo1" src="./img/copo.png">
+                        <img class="copo2" src="./img/copo.png">
+                    </div>
+                    <!-- -------------------------- -->
+                </div>
+                <div class="modal__botonesCompartir">
+                    <span class="modal__compartir">Compartir</span>
+                    <!-- Botones para compartir en redes sociales -->
+                    <a href="https://twitter.com/intent/tweet?text=&amp;url=https://www.escueladidactica.com/navidad/2022"
+                        target="_blank"><img src="img/twitter.svg" title="Compartir en Twitter"></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.escueladidactica.com/navidad/2022&amp;t="
+                        target="_blank"><img src="img/facebook.svg" title="Compartir en Facebook"></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.escueladidactica.com/navidad/2022"
+                        target="_blank"><img src="img/linkedin.svg" title="Compartir en Linkedin"></a>
+                    <a class="btnShareWhatsApp"
+                        href="whatsapp://send?text=https://www.escueladidactica.com/navidad/2022"
+                        data-action="share/whatsapp/share"><img src="img/whatsapp.svg"></a>
+                    <a class="btnShareWhatsApp" onclick="copy()">
+                        <img src="img/link.svg" title="Copiar el link">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------- -->
+    <audio src="./audio/intro.mp3"></audio>
+
+    <!-- cabecera (logo, titulo y parrafo) -->
+    <header class="container-fluid">
+        <div class="row">
+            <div class="headerLogo col-md-3 d-flex justify-content-center">
+                <img class="logoImg" src="./img/logoEscuelDidactica.png" alt="logoEscuelDidactica">
+            </div>
+            <div class="headerText col-md-9 second-col">
+                <div class="headerTittle">
+                    Armemos el pesebre de navidad
+                </div>
+                <p class="headerParra">
+                    Como es tradición cada diciembre armamos el pesebre para
+                    esperar la llegada del Niño Dios. Presiona cada tarjeta
+                    para descubrir un personaje, concéntrate y encuentra su
+                    pareja, así revelarás un personaje en el pesebre y
+                    descubrirás un dato curioso sobre esta tradición de
+                    navidad.
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- ----------------------------------- -->
+
+    <!-- Principal (Tablero de juego) -->
+    <main class="mainContent">
+        <div class="contenedorJuego">
+            <div class="juego">
+                <div id="tablero">
+                    <div class="row_board" id="row_n0">
+
+                    </div>
+                    <div class="row_board" id="row_n1">
+
+                    </div>
+                    <div class="row_board" id="row_n2">
+
+                    </div>
+                    <div class="row_board" id="row_n3">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ---------------------------- -->
+
+    <!-- Pie de pagina (botones de compartir) -->
+    <footer>
+        <div class="container-fluid">
+            <div id="big-row" class="row"> <!-- Pie de pagina cuando la pantalla es de tamaño grande -->
+                <div class="col footer-content footerText">
+                    <p>Somos <img src="img\logoEscuelDidactica.png" width="160px" height="28px" alt="logo"> y te
+                        ayudamos a transformar el aprendizaje en
+                        experiencias memorables</p>
+                </div>
+                <div class="col-md-2 footer-content">
+
+                </div>
+                <div class="col d-flex justify-content-end">
+
+                    <p id="siguenos">Síguenos</p>
+
+                    <a class="btn-circulo" href="https://www.facebook.com/escueladidactica" target="_blank"
+                        rel="noopener noreferrer"><img src="img\facebookED.png" alt="facebook"></a>
+
+                    <a class="btn-circulo" href="https://www.instagram.com/escueladidactica/" target="_blank"
+                        rel="noopener noreferrer"><img src="img\instagramED.png" alt="instagram"></a>
+                    <a class="btn-circulo" href="https://co.linkedin.com/company/escueladidactica" target="_blank"
+                        rel="noopener noreferrer"><img src="img\linkedinED.png" alt="instagram"></a>
+
+                    <a class="contactenos" href="https://www.escueladidactica.com/contactanos/" target="_blank"
+                        rel="noopener noreferrer">Contáctanos</a>
+                </div>
+            </div>
+            <div id="small-row" class="row"> <!-- Implementacion de los estilos -->
+                <div class="col d-flex justify-content-start">
+                    <p id="siguenos">Síguenos</p>
+
+                    <a class="btn-circulo" href="https://www.facebook.com/escueladidactica" target="_blank"
+                        rel="noopener noreferrer"><img src="img\facebookED.png" alt="facebook"></a>
+
+                    <a class="btn-circulo" href="https://www.instagram.com/escueladidactica/" target="_blank"
+                        rel="noopener noreferrer"><img src="img\instagramED.png" alt="instagram"></a>
+                    <a class="btn-circulo" href="https://co.linkedin.com/company/escueladidactica" target="_blank"
+                        rel="noopener noreferrer"><img src="img\linkedinED.png" alt="instagram"></a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a class="contactenos" href="https://www.escueladidactica.com/contactanos/" target="_blank"
+                        rel="noopener noreferrer">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ------------------------------- -->
+
+
+    <!-- Botones fijos de la izquierda -->
+    <div class="botonesizquierda">
+
+        <a class="btn2-circulo"
+            href="https://twitter.com/intent/tweet?text=&url=https://www.escueladidactica.com/navidad/2022"
+            target="_blank" rel="noopener noreferrer"><img src="img\sharedTwitter.png" alt="twitter"></a>
+        <br>
+        <a class="btn2-circulo"
+            href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%253A%252F%252Fwww.escueladidactica.com%252Fnavidad%252F2022%26t&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=es_ES"
+            target="_blank" rel="noopener noreferrer"><img src="img\sharedFacebook.png" alt="facebook"></a>
+        <br>
+        <a class="btn2-circulo"
+            href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.escueladidactica.com%2Fnavidad%2F2022"
+            target="_blank" rel="noopener noreferrer"><img src="img\sharedLinkedin.png" alt="linkein"></a>
+        <br>
+        <a class="btn2-circulo" onclick="copy()"><img src="img\shared.png" alt="copy"></a>
+
+    </div>
+    <!-- --------------------------
+         -->
+    <script src="js/script.js"></script>
+    <script src="js/memo.js"></script>
+</body>
+
+</html>
+
+<body>

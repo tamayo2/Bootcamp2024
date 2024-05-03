@@ -1,0 +1,122 @@
+.contactenos:hover{
+    opacity: 100%;
+    transition: 0.5s;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-circulo:hover{
+    color: #0056b3;
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.btn2-circulo:hover{
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+/* animacion copo de nieve */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* ------------------------------ */
+
+/* animacion copo de quitar sobreposicion*/
+@keyframes swing {
+    20% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    40% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+
+    60% {
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+
+    80% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+@keyframes slideOutDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        visibility: hidden;
+        transform: translateY(200%);
+    }
+}
+
+/* ----------------------------------------- */
+
+/* Animacion entrada de cartas*/
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+/* ----------------------------------------- */
+
+/* Animacion de rebote*/
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(.9, .9, .9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(.97, .97, .97);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+/* ----------------------------------------- */
