@@ -47,11 +47,11 @@ function makeTable() { //generar la tabla
                             ${icons[0]}
                         </div>
                         <div class="cara superior">
-                            <img src="./img/tarjeta_cubierta.png" alt="cubierta">
+                            <img src="./img/tarjeta_cubierta.png" alt="cubierta"> 
                         </div>
                     </div>
                 </div>        
-                `) //guardar en el arreglo las 4 cartas generadas
+                `) //guardar en el arreglo las 4 cartas generadas dandole la cara superior a las cartas
             icons.splice(0, 1) //eliminar de el arreglo
         }
 
@@ -96,7 +96,7 @@ function comparationCards(selections) {
             beat = new Audio('./audio/incorrecta.mp3'); //reproducimos el audio de la carta incorrecta
             beat.play(); 
         } else { //si coinciden
-            beat = new Audio('./audio/correcta.mp3'); //reproducimos el audio de la carta correcta
+            beat = new Audio('./audio/correcta.mp3'); //reproducimos el audio de la carta correcta, es un sonido especial
             beat.play();
             var img = backFace1.querySelector("img"); //selecciono la etiqueta img
             var alt = img.getAttribute("alt"); //consulto el contenido del atributo alt
