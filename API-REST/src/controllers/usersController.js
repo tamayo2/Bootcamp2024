@@ -1,7 +1,5 @@
-// endpoints/users.js
-
 import express from "express";
-import connection from "../../DBConnection.js"; // Asegúrate de ajustar la ruta de acuerdo a la ubicación de tu archivo de conexión
+import connection from "../../DBConnection.js";
 
 export const getAllUsers = async (req, res) => {
   try {
