@@ -10,8 +10,6 @@ const catImgFunction = async (state) => {
     state(peticion.data[0].url)
 }
 
-//const cat
-
 export {
     catImgFunction
 }
